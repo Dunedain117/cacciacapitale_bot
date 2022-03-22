@@ -14,7 +14,7 @@ import os
 import django_heroku
 import logging
 
-SITE_ADDRESS = "cacciacapitale.herokuapp.com"
+SITE_ADDRESS = "cacciabot.herokuapp.com"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,7 +33,7 @@ SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "manage" in "".join(sys.argv)
 print(f"DEBUG {DEBUG}")
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [".herokuapp.com"]
 
 if DEBUG is False:
     CSRF_COOKIE_SECURE = True
